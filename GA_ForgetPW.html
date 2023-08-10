@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forget Password - SwiftRemit</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .centerPW{
+                text-align: center;
+                padding: 70px 0;
+            }
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <div class = "centerPW">
+            <form action = 'GA_Login.html'>
+                <img src= "C:\Users\22026038\Pictures\SwiftRemit.png" alt="SwiftRemit Logo"/>
+                <p>Enter the email linked to your account and an email will be sent to you!</p>
+                <label for="Email">Enter Email:</label><br>
+                <input type="text" id="email" name="email" value="" required><br><br>
+                <p></p>
+                <input type="submit" value="Forget Password" onclick = displayForgetPW()>
+            </form>
+        </div>
+        
+        <script>
+            function displayForgetPW() {
+            alert("An email has been sent to your account!");
+            location.href='GA_Login.html';
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
+
+
+
+
+

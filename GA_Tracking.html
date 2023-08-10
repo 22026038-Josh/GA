@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tracker - SwiftRemit</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            #topnav{
+                line-height:90px;
+                border-bottom: 3px solid black;
+            }
+            #logo{
+                line-height:90px;
+                padding-right: 609px;
+                
+            }
+
+            .navbar-nav > li{
+                padding-left:30px;
+                padding-right:30px;
+            }
+
+            #logoPic{
+                width: 212px;
+                height: 63px;
+            }
+
+            .btn {
+                float: right;
+                background-color: #AF4C4C;  
+                color: #ffffff; 
+                padding: 16px 20px; 
+                border-radius: 12px; 
+                width:90px;
+                height:60px;
+                margin-right: 5px;
+                margin-top: 15px;
+            }
+
+            .track{
+                padding: 16px 20px;
+            }
+
+            .status{
+                padding: 16px 20px;
+
+            }
+
+            p{
+                font-size: 14px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm bg-white justify-content-end" id = "topnav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="active" id = "logo" href="GA_HomePageLogin.html" ><img id ="logoPic" src= "C:\Users\22026038\Pictures\SwiftRemit.png" alt="SwiftRemit Logo"/></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_HomePageLogin.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_Transfer.html"><strong>Transfers</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none  style = color:#1F51FF href="GA_RatesLogin.html"><strong>Exchange Rates</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_SecurityLogin.html"><strong>Security</strong></a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn" onclick = "displayLogout()" >
+                        Logout
+                   </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class = "track">
+            <h1>Track Your Transfer</h1>
+            <label for="id">Enter your Transaction ID:</label><br>
+            <input type="text" id="id" name="id" value=""><br>
+            <label for="tPin">Enter your Tracking Pin:</label><br>
+            <input type="text" id="tPin" name="tPin" value=""><br><br>
+            <p>Your transaction ID and tracking pin would have been emailed to you within minutes of your transfer</p>
+            <button type="submit" onclick = directToTrack()>Start Tracking</button>
+        </div>
+
+        <div class = "status">
+            <h2>Transfer Status</h2>
+            <label for="id">Transaction Amount:</label><br>
+            <input type="text" id="id" name="id" value="$1000" readonly><br>
+            <label for="id">Transaction Status:</label><br>
+            <input type="text" id="id" name="id" value="Pending" readonly><br>
+            <label for="id">Estimated Time Left:</label><br>
+            <input type="text" id="id" name="id" value="3 Minutes" readonly><br>
+            
+
+        </div>
+
+        <script>
+            function displayLogout() {
+            alert("Logout Successful. Have a nice day!");
+            location.href='GA_HomePage.html';
+            }
+            function directToTrack() {
+            location.href='GA_Tracking.html';
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

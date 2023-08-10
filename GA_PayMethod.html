@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+    <title>Payment Method - SwiftRemit</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        a{
+          text-decoration:none;
+          font-family: 'Trebuchet MS';
+          font-size: 28px;
+        }
+        h1,h3{
+          font-family: 'Trebuchet MS';
+        }
+
+    </style>
+  </head>
+  <body>
+      <h1>Select Payment Method</h1>
+      <script src="https://www.paypal.com/sdk/js?client-id=AZTIG24st_VOSb6EG5GAMejMDoNN9AdZkw5ff32CKU7TH5c4eOQ1PFqllwOwoFWrxLq5paCSb5VzU7-f&currency=USD" data-sdk-integration-source="button-factory"></script>
+      <script type="text/javascript" src="script.js"></script>
+      <div id="paypal-button-container"></div>
+  <script> 
+    function initPayPalButton() { 
+        paypal.Buttons({ 
+          style: { 
+            shape: 'rect', 
+            color: 'gold', 
+            layout: 'vertical', 
+            label: 'paypal', 
+          }, 
+       
+          createOrder: function(data, actions) { 
+            return actions.order.create({ 
+              purchase_units: [{"amount":{"currency_code":"USD","value":0.99}}] 
+            }); 
+          }, 
+       
+          onApprove: function(data, actions) { 
+            return actions.order.capture().then(function(orderData) { 
+               
+              // Full available details 
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2)); 
+       
+              // Show a success message within this page, for example: 
+              const element = document.getElementById('paypal-button-container'); 
+              element.innerHTML = ''; 
+              element.innerHTML = '<h3>Transaction Confirmed</h3>'; 
+       
+              // Or go to another URL:  actions.redirect('thank_you.html'); 
+               
+            }); 
+          }, 
+       
+          onError: function(err) { 
+            console.log(err); 
+          } 
+        }).render('#paypal-button-container'); 
+      } 
+      initPayPalButton(); 
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome - SwiftRemit</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            .btn {
+                float: right;
+                background-color: #AF4C4C;  
+                color: #ffffff; 
+                padding: 16px 20px; 
+                border-radius: 12px; 
+                width:120px;
+                height:60px;
+                margin-right: 5px;
+                margin-top: 15px;
+            }
+
+            #topnav{
+                line-height:90px;
+                border-bottom: 3px solid black;
+            }
+            #logo{
+                line-height:90px;
+                padding-right: 477px;
+            }
+
+            #logoPic{
+                width: 212px;
+                height: 63px;
+            }
+
+            .navbar-nav > li{
+                padding-left:30px;
+                padding-right:30px;
+            }
+
+
+            /* Align the three rows of text */
+            div1{
+                text-align: left;
+                float: left;
+                font-family: 'Trebuchet MS';
+            }
+            div2 {
+                text-align: right;
+                margin-left: auto;
+                font-family: 'Trebuchet MS';
+            }
+            div3{
+                text-align: left;
+                float: left;
+                font-family: 'Trebuchet MS';
+            }
+            section{
+                padding-top:10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm bg-white justify-content-end" id = "topnav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="active" id = "logo" href="GA_HomePage.html" ><img id = "logoPic" src= "C:\Users\22026038\Pictures\SwiftRemit.png" alt="SwiftRemit Logo"/></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_HomePage.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a onclick = directToLogin() style = color:#1F51FF><strong>Transfers</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_Rates.html"><strong>Exchange Rates</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_Security.html"><strong>Security</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style= text-decoration:none style = color:#1F51FF href="GA_Login.html"><strong>Login</strong></a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn" onclick = "location.href='GA_Register.html'">
+                        <i class="fa fa-plus" style="color:white"></i> Register 
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div1 class="col-xs-4 col-md-4">
+                        <h2>Welcome to SwiftRemit</h2>
+                        <p>
+                            We offer worldwide remittance services, better exchange rates and the lowest transaction fees
+                        </p>
+                    </div1>
+                    <hr>
+        
+    
+    
+                    <div2 class="col-xs-4 col-md-4">
+                        <h2>Our Mission</h2>
+                        <p>
+                            To revolutionize the way people send money globally, making it a seamless experience accessible to everyone, 
+                            regardless of their location. We aim to provide a user-friendly platform that prioritizes customer satisfaction 
+                            and safety and a quick and simple experience
+                        </p>
+                    </div2>
+                    <hr>
+      
+    
+                    <div3 class="col-xs-4 col-md-4">
+                        <h2>Our Vision</h2>
+                        <p>
+                            At SwiftRemit, our vision is to empower individuals and families worldwide by offering a hassle-free platform for 
+                            international money transfers. We strive to be the number one choice for anyone seeking a seucre, swift 
+                            and transparent solution to send money back home
+                        </p>
+                    </div3>
+                </div>
+            </div>
+        </section>
+        <script>
+            function directToLogin() {
+            alert("Please login to transfer!");
+            location.href='GA_Login.html';
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enter OTP - SwiftRemit</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                text-align: center;
+                padding: 70px 0;
+                background-color: #4C91AF;
+            }
+            a{
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Verification</h1>
+        <form action = 'GA_Login.html'>
+            <p>Hi! <br> Thank you for registering an account with us. Please enter the OTP as sent to your email.</p>
+            <label for="otp">Enter OTP:</label><br>
+            <input type="text" id="otp" name="otp" value="" required><br>
+            <p>OTP not received? <a onclick=resendOTP()><strong>RESEND</strong></a></p>
+            <p></p>
+            <input type="submit" value="Register" onclick = displayRegister()>
+        </form> 
+        
+        <script>
+            function displayRegister() {
+            alert("Successfully Registered. Please login!");
+            location.href='GA_Login.html';
+            }
+            function resendOTP() {
+            alert("OTP has been sent!");
+            location.href='GA_OTP.html';
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
